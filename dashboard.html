@@ -46,20 +46,22 @@
 <script type="text/javascript" lang="javascript">
     var username = sessionStorage.getItem('usernames');
     var password = sessionStorage.getItem('passwords');
-    var capperpw = password.toUpperCase();
+    console.log(typeof password);
 
-    var welcomeSentence = document.getElementById("welcome");
-    welcomeSentence.innerHTML = "Welcome Back, " + capperpw
-
-    var blocker = document.getElementById("blocker");
-    
-    if (capperpw == "UNDEFINED"){
+    if (typeof password == undefined){
         blocker.style.display = "block";
         window.location="http://craftguy.my.to/"
     }
     else{
         blocker.style.display = "none";
     }
+
+    var capperpw = password.toUpperCase();
+
+    var welcomeSentence = document.getElementById("welcome");
+    welcomeSentence.innerHTML = "Welcome Back, " + capperpw
+
+    var blocker = document.getElementById("blocker");
 </script>
 </body>
 </html>
