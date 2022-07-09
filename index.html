@@ -50,8 +50,11 @@ var username;
 var john = document.getElementById("john");
 var billy = document.getElementById("billy");
 
-username = prompt('Your Username','');
-password = prompt('Your Password','');
+user = prompt('Your Username','');
+pass = prompt('Your Password','');
+
+username = user.trim();
+password = pass.trim();
 
 if (username == 'billiez'){
 if (password == 'ellalover'){
