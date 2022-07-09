@@ -71,6 +71,7 @@ Press F5 or Refresh to Login.
 <div id="welcome" class="welcome"></div>
 <a href="dashboard.html" target="_self"><div style="justify-content:center;"><button id="dashboard" class="dashboard" onclick="goto()">Go To Dashboard</button></div>
 <script type="text/javascript" lang="javascript">
+
 var password;
 var username;
 
@@ -87,9 +88,6 @@ if (username == 'billiez'){
 if (password == 'craftguy'){
 alert('Welcome billiez!')
 blocker.style.display = "none";
-let cappername = username.toUpperCase();
-let capname = cappername.trim();
-
 let capperpw = password.toUpperCase();
 
 welcome.innerHTML = "Hi " + capperpw + "!"
