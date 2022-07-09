@@ -47,25 +47,26 @@
     var username = sessionStorage.getItem('usernames');
     var password = sessionStorage.getItem('passwords');
     console.log(typeof password);
+    var blocker = document.getElementById("blocker");
 
-    if (typeof password == undefined){
-        blocker.style.display = "block";
-        window.location="http://craftguy.my.to/"
+    if (password == charles){
+        blocker.style.display = "none";
     }
-    else if (typeof password === undefined){
-        blocker.style.display = "block";
-        window.location="http://craftguy.my.to/"
+    else if (password == corinna){
+        blocker.style.display = "none";
+    }
+    else if (password == craftguy){
+        blocker.style.display = "none";
     }
     else{
-        blocker.style.display = "none";
+        blocker.style.display = "block";
+        window.location="http://craftguy.my.to/"
     }
 
     var capperpw = password.toUpperCase();
 
     var welcomeSentence = document.getElementById("welcome");
     welcomeSentence.innerHTML = "Welcome Back, " + capperpw
-
-    var blocker = document.getElementById("blocker");
 </script>
 </body>
 </html>
