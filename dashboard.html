@@ -51,22 +51,26 @@
 
     if (password == "charles"){
         blocker.style.display = "none";
+        var capperpw = password.toUpperCase();
+        var welcomeSentence = document.getElementById("welcome");
+        welcomeSentence.innerHTML = "Welcome Back, " + capperpw
     }
     else if (password == "corinna"){
         blocker.style.display = "none";
+        var capperpw = password.toUpperCase();
+        var welcomeSentence = document.getElementById("welcome");
+        welcomeSentence.innerHTML = "Welcome Back, " + capperpw
     }
     else if (password == "craftguy"){
         blocker.style.display = "none";
+        var capperpw = password.toUpperCase();
+        var welcomeSentence = document.getElementById("welcome");
+        welcomeSentence.innerHTML = "Welcome Back, " + capperpw
     }
     else{
         blocker.style.display = "block";
         window.location="http://craftguy.my.to/"
     }
-
-    var capperpw = password.toUpperCase();
-
-    var welcomeSentence = document.getElementById("welcome");
-    welcomeSentence.innerHTML = "Welcome Back, " + capperpw
 </script>
 </body>
 </html>
