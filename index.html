@@ -1,17 +1,65 @@
 <!doctype html>
 <html>
-<head></head>
+<head>
+    <style>
+        body{
+            background-color:#fff;
+        }
+        
+        .welcome{
+            text-align:center;
+            font-family: Consolas;
+            font-size: 35px;
+            color:#000;
+        }
+
+        .johnj,
+        .billiez{
+            text-align:center;
+            font-family: Consolas;
+            font-size: 45px;
+            color:#000;
+            display:none;
+            animation-name: lover;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0.3s;
+        }
+
+        @keyframes lover{
+            0%{
+                color:blue;
+            }
+            50%{
+                color:red;
+            }
+            100%{
+                color:blue;
+            }
+        }
+    </style>
+</head>
 <body>
+<div id="welcome" class="welcome"></div>
+<div id="john" class="johnj">Mandy Love U!</div>
+<div id="billy" class="billiez">Ella Love U!</div>
 <script type="text/javascript" lang="javascript">
 var password;
 var username;
+var john = document.getElementById("john");
+var billy = document.getElementById("billy");
 
-username = prompt('username','');
-password = prompt('password','');
+username = prompt('Your Username','');
+password = prompt('Your Password','');
 
 if (username == 'billiez'){
 if (password == 'ellalover'){
-alert('Welcome!')
+alert('Welcome billiez!')
+let capname = username.toUpperCase();
+welcome.innerHTML = "Hi " + capname + "!"
+billy.style.display = "block";
+
 }else{
 alert('No you are not billiez!')
 window.location="http://music.fishing-family.tk/"
@@ -20,7 +68,11 @@ window.location="http://music.fishing-family.tk/"
 
 else if (username == 'johnj'){
 if (password == 'mandylover'){
-alert('Welcome!')
+alert('Welcome JohnJ!')
+let capname = username.toUpperCase();
+welcome.innerHTML = "Hi " + capname + "!"
+john.style.display = "block";
+
 }else{
 alert('No you are not JohnJ!')
 window.location="http://music.fishing-family.tk/"
