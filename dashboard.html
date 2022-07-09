@@ -23,10 +23,26 @@
             color:#000;
             font-family: Consolas;
         }
+
+        .forced-login{
+     text-align:center;
+     font-size:4vw;
+     position:fixed;
+     background-color:#000;
+     color:#fff;
+     width:100%;
+     height:100%;
+     display:none;
+     font-family: Consolas;
+}
+
     </style>
 </head>
 <body>
 <div class="welcome" id="welcome"></div>
+<div class="forced-login" id="blocker">
+    Please Login First!
+    </div>
 <script type="text/javascript" lang="javascript">
     var username = sessionStorage.getItem('usernames');
     var password = sessionStorage.getItem('passwords');
@@ -34,6 +50,16 @@
 
     var welcomeSentence = document.getElementById("welcome");
     welcomeSentence.innerHTML = "Welcome Back, " + capperpw
+
+    var blocker = document.getElementById("blocker");
+    
+    if (capperpw == "UNDEFINED"){
+        blocker.style.display = "block";
+        window.location="http://craftguy.my.to/"
+    }
+    else{
+        blocker.style.display = "none";
+    }
 </script>
 </body>
 </html>
