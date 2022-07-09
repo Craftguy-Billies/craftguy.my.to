@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-<title>Ella</title>
+<title>Fishing Family&trade; Login</title>
 <meta content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;' name='viewport' />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -22,32 +22,6 @@
             font-family: Consolas;
             font-size: 3.5vw;
             color:#000;
-        }
-
-        .johnj,
-        .billiez{
-            text-align:center;
-            font-family: Consolas;
-            font-size: 4vw;
-            color:#000;
-            display:none;
-            animation-name: lover;
-            animation-duration: 3s;
-            animation-iteration-count: infinite;
-            animation-timing-function: ease-in-out;
-            animation-delay: 0.3s;
-        }
-
-        @keyframes lover{
-            0%{
-                color:blue;
-            }
-            50%{
-                color:red;
-            }
-            100%{
-                color:blue;
-            }
         }
 
 .forced-login{
@@ -95,14 +69,11 @@ Please Login First!<div></div>
 Press F5 or Refresh to Login.
 </div>
 <div id="welcome" class="welcome"></div>
-<div id="john" class="johnj">Mandy Love U!</div>
-<div id="billy" class="billiez">Ella Love U!</div>
 <a href="dashboard.html" target="_self"><div style="justify-content:center;"><button id="dashboard" class="dashboard" onclick="goto()">Go To Dashboard</button></div>
 <script type="text/javascript" lang="javascript">
 var password;
 var username;
-var john = document.getElementById("john");
-var billy = document.getElementById("billy");
+
 var blocker = document.getElementById("blocker");
 var dashboard = document.getElementById("dashboard");
 
@@ -113,40 +84,52 @@ username = user.trim();
 password = pass.trim();
 
 if (username == 'billiez'){
-if (password == 'ellalover'){
+if (password == 'craftguy'){
 alert('Welcome billiez!')
 blocker.style.display = "none";
 let cappername = username.toUpperCase();
 let capname = cappername.trim();
-welcome.innerHTML = "Hi " + capname + "!"
-billy.style.display = "block";
+
+let capperpw = password.toUpperCase();
+
+welcome.innerHTML = "Hi " + capperpw + "!"
 dashboard.style.display = "block";
 
 }else{
-alert('No you are not billiez!')
-window.location="http://music.fishing-family.tk/"
+alert('No you are not Craftguy!')
+window.location="https://fishing-family.tk/"
 }
 }
 
-else if (username == 'johnj'){
-if (password == 'mandylover'){
-alert('Welcome JohnJ!')
+else if (username == 'dad'){
+if (password == 'charles'){
+alert('Welcome dad!')
 blocker.style.display = "none";
-let cappername = username.toUpperCase();
-let capname = cappername.trim();
-welcome.innerHTML = "Hi " + capname + "!"
-john.style.display = "block";
+welcome.innerHTML = "Hi " + username + "!"
 dashboard.style.display = "block";
 
 }else{
-alert('No you are not JohnJ!')
-window.location="http://music.fishing-family.tk/"
+alert('Incorrect password!')
+window.location="https://fishing-family.tk/"
+}
+}
+
+else if (username == 'mum'){
+if (password == 'corinna'){
+alert('Welcome mum!')
+blocker.style.display = "none";
+welcome.innerHTML = "Hi " + username + "!"
+dashboard.style.display = "block";
+
+}else{
+alert('Incorrect password!')
+window.location="https://fishing-family.tk/"
 }
 }
 
 else{
 alert('Wrong username!')
-window.location="https://www.google.com/"
+window.location="https://fishing-family.tk/"
 }
 
 
