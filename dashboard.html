@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <meta content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;' name='viewport' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            background-color: #fff;
+        }
+
+        .welcome{
+            text-align:center;
+            font-size:4vw;
+            color:#000;
+        }
+    </style>
+</head>
+<body>
+<div class="welcome" id="welcome"></div>
+<script type="text/javascript" lang="javascript">
+    var username = sessionStorage.getItem('usernames');
+    var password = sessionStorage.getItem('passwords');
+    var capname = username.toUpperCase();
+
+    var welcomeSentence = document.getElementById("welcome");
+    welcomeSentence.innerHTML = "Welcome Back, " + capname
+</script>
+</body>
+</html>
