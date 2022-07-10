@@ -62,6 +62,14 @@ a:hover{
     color: #000;
 }
 
+.alert{
+    font-family: Consolas;
+    font-size:3vw;
+    color: #000;
+    text-align:center;
+    display:none;
+}
+
     </style>
 </head>
 <body>
@@ -70,6 +78,10 @@ Please Login First!<div></div>
 Press F5 or Refresh to Login.
 </div>
 <div id="welcome" class="welcome"></div>
+<div id="alert" class="alert">
+    <strong>To access the dashboard, <div></div> 
+    please login with the given username and password!</strong>
+</div>
 <a href="dashboard.html" target="_self"><button id="dashboard" class="dashboard" onclick="goto()">Go To Dashboard</button>
 <script type="text/javascript" lang="javascript">
 
@@ -121,6 +133,16 @@ dashboard.style.display = "block";
 }else{
 alert('Incorrect password!')
 }
+}
+
+else if (username == 'guest'){
+alert('Welcome guest!')
+alert('To access your dashboard, please login with giver username and password!')
+blocker.style.display = "none";
+welcome.innerHTML = "Hi " + username + "!"
+ var alerter = document.getElementById("alert")
+
+ alerter.style.display = "block";
 }
 
 else{
