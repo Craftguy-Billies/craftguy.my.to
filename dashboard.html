@@ -72,6 +72,23 @@
      transform: translateY(3px);
 }
 
+.mainpage{
+    display:none;
+    border:1.5px solid #000;
+     font-size:35px;
+     background-color: greenyellow;
+     color:#000;
+     box-shadow: 1px 4px 2.5px grey;
+     cursor:pointer;
+     font-family: Consolas;
+     width:auto;
+}
+
+.mainpage:active{
+     box-shadow: 1px 1px 2.5px grey;
+     transform: translateY(3px);
+}
+
     </style>
 </head>
 <body>
@@ -93,6 +110,7 @@
     </div>
 
     <button class="logout" id="logout" onclick="logout()">Logout</button>
+    <button class="mainpage" id="mainpage" onclick="mainpage()">Logout</button>
 <script type="text/javascript" lang="javascript">
     var username = sessionStorage.getItem("usernames");
     var password = sessionStorage.getItem("passwords");
@@ -313,6 +331,11 @@ if (password == "charles"){
 sessionStorage.clear();
 
 window.location="http://craftguy.my.to/"
+}
+
+function mainpage(){
+    localStorage.setItem("password",verificationpw)
+    window.location="http://craftguy.my.to/page 1.html/"
 }
 </script>
 </body>
