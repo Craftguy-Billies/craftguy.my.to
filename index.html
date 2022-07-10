@@ -70,6 +70,10 @@ a:hover{
     display:none;
 }
 
+.logout{
+    display:none;
+}
+
     </style>
 </head>
 <body>
@@ -83,7 +87,47 @@ Press F5 or Refresh to Login.
     please login with the given username and password!</strong>
 </div>
 <a href="dashboard.html" target="_self"><button id="dashboard" class="dashboard" onclick="goto()">Go To Dashboard</button>
+    <button id="logout" class="logout" onclick="logout()">Logout</button>
 <script type="text/javascript" lang="javascript">
+
+window.localStorage.getItem('username');
+window.localStorage.getItem('password');
+
+if (username == 'billiez' && password == 'craftguy'){
+alert('Welcome billiez!')
+blocker.style.display = "none";
+let capperpw = password.toUpperCase();
+
+welcome.innerHTML = "Hi " + capperpw + "!"
+dashboard.style.display = "block";
+
+var logoutbtn = document.getElementById("logout");
+logoutbtn.style.display = "block";
+}
+
+else if (username == 'dad' && password == 'charles'){
+alert('Welcome dad!')
+blocker.style.display = "none";
+welcome.innerHTML = "Hi " + username + "!"
+dashboard.style.display = "block";
+
+var logoutbtn = document.getElementById("logout");
+logoutbtn.style.display = "block";
+}
+
+else if (username == 'mum' && password == 'corinna'){
+alert('Welcome mum!')
+blocker.style.display = "none";
+welcome.innerHTML = "Hi " + username + "!"
+dashboard.style.display = "block";
+
+var logoutbtn = document.getElementById("logout");
+logoutbtn.style.display = "block";
+}
+
+else{
+
+window.localStorage.clear();
 
 var password;
 var username;
@@ -106,6 +150,12 @@ let capperpw = password.toUpperCase();
 welcome.innerHTML = "Hi " + capperpw + "!"
 dashboard.style.display = "block";
 
+var logoutbtn = document.getElementById("logout");
+logoutbtn.style.display = "block";
+
+window.localStorage.setItem('username',JSON.stringify(username));
+window.localStorage.setItem('password',JSON.stringify(password));
+
 }else{
 alert('No you are not Craftguy!')
 }
@@ -118,6 +168,12 @@ blocker.style.display = "none";
 welcome.innerHTML = "Hi " + username + "!"
 dashboard.style.display = "block";
 
+var logoutbtn = document.getElementById("logout");
+logoutbtn.style.display = "block";
+
+window.localStorage.setItem('username',JSON.stringify(username));
+window.localStorage.setItem('password',JSON.stringify(password));
+
 }else{
 alert('Incorrect password!')
 }
@@ -129,6 +185,12 @@ alert('Welcome mum!')
 blocker.style.display = "none";
 welcome.innerHTML = "Hi " + username + "!"
 dashboard.style.display = "block";
+
+var logoutbtn = document.getElementById("logout");
+logoutbtn.style.display = "block";
+
+window.localStorage.setItem('username',JSON.stringify(username));
+window.localStorage.setItem('password',JSON.stringify(password));
 
 }else{
 alert('Incorrect password!')
@@ -143,27 +205,27 @@ welcome.innerHTML = "Hi " + username + "!"
  var alerter = document.getElementById("alert")
 
  alerter.style.display = "block";
+
+var logoutbtn = document.getElementById("logout");
+logoutbtn.style.display = "block";
 }
 
 else{
 alert('Wrong username!')
 }
-
+}
 
 function goto(){
 
 sessionStorage.setItem("usernames",username);
 sessionStorage.setItem("passwords",password);
+}
 
-var hours = 0.08; // Reset when storage is more than 0.08hours
-var now = new Date().getTime();
-var setupTime = sessionStorage.getItem('setupTime');
-if (setupTime == null) { 
-sessionStorage.setItem('setupTime', now)
-} else { 
-if(now-setupTime > hours*60*60*1000) { 
-sessionStorage.clear() 
-sessionStorage.setItem('setupTime', now); }}
+function logout(){
+window.localStorage.removeItem('username');
+window.localStorage.removeItem('password');
+
+window.location="http://craftguy.my.to/"
 }
 
 </script>
