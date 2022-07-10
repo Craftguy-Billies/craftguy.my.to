@@ -90,8 +90,8 @@ Press F5 or Refresh to Login.
     <button id="logout" class="logout" onclick="logout()">Logout</button>
 <script type="text/javascript" lang="javascript">
 
-let usernames = window.localStorage.getItem('username');
-let passwords = window.localStorage.getItem('password');
+var usernames = localStorage.getItem('username');
+var passwords = localStorage.getItem('password');
 
 if (passwords == 'craftguy'){
 alert('Welcome billiez!')
@@ -153,8 +153,8 @@ dashboard.style.display = "block";
 var logoutbtn = document.getElementById("logout");
 logoutbtn.style.display = "block";
 
-window.localStorage.setItem('username',JSON.stringify(username));
-window.localStorage.setItem('password',JSON.stringify(password));
+localStorage.setItem('username',JSON.stringify(username));
+localStorage.setItem('password',JSON.stringify(password));
 
 }else{
 alert('No you are not Craftguy!')
@@ -171,8 +171,8 @@ dashboard.style.display = "block";
 var logoutbtn = document.getElementById("logout");
 logoutbtn.style.display = "block";
 
-window.localStorage.setItem('username',JSON.stringify(username));
-window.localStorage.setItem('password',JSON.stringify(password));
+localStorage.setItem('username',JSON.stringify(username));
+localStorage.setItem('password',JSON.stringify(password));
 
 }else{
 alert('Incorrect password!')
@@ -189,8 +189,8 @@ dashboard.style.display = "block";
 var logoutbtn = document.getElementById("logout");
 logoutbtn.style.display = "block";
 
-window.localStorage.setItem('username',JSON.stringify(username));
-window.localStorage.setItem('password',JSON.stringify(password));
+localStorage.setItem('username',JSON.stringify(username));
+localStorage.setItem('password',JSON.stringify(password));
 
 }else{
 alert('Incorrect password!')
@@ -222,8 +222,8 @@ sessionStorage.setItem("passwords",password);
 }
 
 function logout(){
-window.localStorage.removeItem('username');
-window.localStorage.removeItem('password');
+localStorage.removeItem('username');
+localStorage.removeItem('password');
 
 window.location="http://craftguy.my.to/"
 }
