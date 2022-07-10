@@ -94,11 +94,12 @@ var usernames = localStorage.getItem("username");
 var passwords = localStorage.getItem("password");
 
 var blocker = document.getElementById("blocker");
+var dashboard = document.getElementById("dashboard");
 
 if (passwords == 'craftguy'){
 alert('Welcome billiez!');
 blocker.style.display = "none";
-let capperpw = password.toUpperCase();
+let capperpw = passwords.toUpperCase();
 
 welcome.innerHTML = "Hi " + capperpw + "!"
 dashboard.style.display = "block";
@@ -110,7 +111,7 @@ logoutbtn.style.display = "block";
 else if (passwords == 'charles'){
 alert('Welcome dad!');
 blocker.style.display = "none";
-welcome.innerHTML = "Hi " + username + "!"
+welcome.innerHTML = "Hi " + usernames + "!"
 dashboard.style.display = "block";
 
 var logoutbtn = document.getElementById("logout");
@@ -120,7 +121,7 @@ logoutbtn.style.display = "block";
 else if (passwords == 'corinna'){
 alert('Welcome mum!');
 blocker.style.display = "none";
-welcome.innerHTML = "Hi " + username + "!"
+welcome.innerHTML = "Hi " + usernames + "!"
 dashboard.style.display = "block";
 
 var logoutbtn = document.getElementById("logout");
