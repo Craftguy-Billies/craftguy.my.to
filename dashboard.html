@@ -75,9 +75,21 @@
     </style>
 </head>
 <body>
+
+    <script type="text/javascript" lang="javascript">
+        function reloadAfter(minutes){
+            const millisToWait = minutes * 60 * 1000;
+            const millisLeft = millisToWait - (Date.now() % millisToWait);
+
+            setTimeout(() => location.reload(), millisLeft);
+        }
+
+        addEventListener('load',() => reloadAfter(1));
+        
+    </script>
 <div class="welcome" id="welcome"></div>
 <div class="forced-login" id="blocker">
-    Please Login First!
+    Redirecting to main page...
     </div>
 
     <button class="logout" id="logout" onclick="logout()">Logout</button>
