@@ -118,7 +118,7 @@
         
     }
 
-    else{
+else{
 
     if (passwords == "charles"){
         blocker.style.display = "none";
@@ -308,14 +308,9 @@ if (password == "charles"){
     }
 
     function logout(){
-localStorage.removeItem('username');
-localStorage.removeItem('password');
+        localStorage.clear();
 
-sessionStorage.removeItem("usernames");
-sessionStorage.removeItem("passwords");
-
-sessionStorage.removeItem("username");
-sessionStorage.removeItem("password");
+sessionStorage.clear();
 
 window.location="http://craftguy.my.to/"
 }
