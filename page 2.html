@@ -94,34 +94,22 @@
     </div>
 
     <script type="text/javascript" lang="javascript">
-		var verificationpw1 = sessionStorage.getItem('password');
-		var verificationpw2 = sessionStorage.getItem('passwords');
-		
-		if (verificationpw1 = null){
-				blocker.style.display = "block";
-				window.location="http://craftguy.my.to/"
-		
-				
-			}
-		
-			else if (verificationpw1 = undefined){
-				blocker.style.display = "block";
-				window.location="http://craftguy.my.to/"
-		
-				
-			}
-			else if (verificationpw2 = undefined){
-				blocker.style.display = "block";
-				window.location="http://craftguy.my.to/"
-		
-				
-			}
-			else if (verificationpw12 = null){
-				blocker.style.display = "block";
-				window.location="http://craftguy.my.to/"
-		
-				
-			}
+		var verificationUsername = localStorage.getItem('username');
+    var verificationpw = localStorage.getItem('password');
+
+    if (verificationpw = null){
+        blocker.style.display = "block";
+        window.location="http://craftguy.my.to/"
+
+        
+    }
+
+    else if (verificationpw = undefined){
+        blocker.style.display = "block";
+        window.location="http://craftguy.my.to/"
+
+        
+    }
 		</script>
 </body>
 </html>
