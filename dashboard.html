@@ -53,6 +53,10 @@
      font-family: Consolas;
 }
 
+.logout{
+    display:none;
+}
+
     </style>
 </head>
 <body>
@@ -60,6 +64,8 @@
 <div class="forced-login" id="blocker">
     Please Login First!
     </div>
+
+    <div class="logout" id="logout" onclick="logout()">Logout</div>
 <script type="text/javascript" lang="javascript">
     var username = sessionStorage.getItem("usernames");
     var password = sessionStorage.getItem("passwords");
@@ -80,7 +86,7 @@
         blocker.style.display = "block";
         window.location="http://craftguy.my.to/"
     }
-    
+
     else{
 
     if (passwords == "charles"){
@@ -88,6 +94,9 @@
         var capperpw = passwords.toUpperCase();
         var welcomeSentence = document.getElementById("welcome");
         welcomeSentence.innerHTML = "Welcome Back, " + capperpw
+
+        var logoutbtn = document.getElementById("logout");
+        logoutbtn.style.display = "block";
 
         var hours = 0.08; // Reset when storage is more than 0.08hours
         var now = new Date().getTime();
@@ -106,6 +115,9 @@
         var welcomeSentence = document.getElementById("welcome");
         welcomeSentence.innerHTML = "Welcome Back, " + capperpw
 
+        var logoutbtn = document.getElementById("logout");
+        logoutbtn.style.display = "block";
+
         var hours = 0.08; // Reset when storage is more than 0.08hours
         var now = new Date().getTime();
         var setupTime = sessionStorage.getItem('setupTime');
@@ -122,6 +134,9 @@
         var capperpw = passwords.toUpperCase();
         var welcomeSentence = document.getElementById("welcome");
         welcomeSentence.innerHTML = "Welcome Back, " + capperpw
+
+        var logoutbtn = document.getElementById("logout");
+        logoutbtn.style.display = "block";
 
         var hours = 0.08; // Reset when storage is more than 0.08hours
         var now = new Date().getTime();
@@ -142,6 +157,9 @@
         var welcomeSentence = document.getElementById("welcome");
         welcomeSentence.innerHTML = "Welcome Back, " + capperpw
 
+        var logoutbtn = document.getElementById("logout");
+        logoutbtn.style.display = "block";
+
         var hours = 0.08; // Reset when storage is more than 0.08hours
         var now = new Date().getTime();
         var setupTime = sessionStorage.getItem('setupTime');
@@ -158,6 +176,9 @@
         var capperpw = password.toUpperCase();
         var welcomeSentence = document.getElementById("welcome");
         welcomeSentence.innerHTML = "Welcome Back, " + capperpw
+
+        var logoutbtn = document.getElementById("logout");
+        logoutbtn.style.display = "block";
 
         var hours = 0.08; // Reset when storage is more than 0.08hours
         var now = new Date().getTime();
@@ -176,6 +197,9 @@
         var welcomeSentence = document.getElementById("welcome");
         welcomeSentence.innerHTML = "Welcome Back, " + capperpw
 
+        var logoutbtn = document.getElementById("logout");
+        logoutbtn.style.display = "block";
+
         var hours = 0.08; // Reset when storage is more than 0.08hours
         var now = new Date().getTime();
         var setupTime = sessionStorage.getItem('setupTime');
@@ -193,6 +217,19 @@
     }
 }
     }
+
+    function logout(){
+localStorage.removeItem('username');
+localStorage.removeItem('password');
+
+sessionStorage.removeItem("usernames",username);
+sessionStorage.removeItem("passwords",password);
+
+sessionStorage.removeItem("username",usernames);
+sessionStorage.removeItem("password",passwords);
+
+window.location="http://craftguy.my.to/"
+}
 </script>
 </body>
 </html>
