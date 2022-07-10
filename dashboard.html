@@ -65,6 +65,62 @@
     var password = sessionStorage.getItem("passwords");
     var blocker = document.getElementById("blocker");
 
+    var usernames = sessionStorage.getItem("username");
+    var passwords = sessionStorage.getItem("password");
+
+    if (passwords == "charles"){
+        blocker.style.display = "none";
+        var capperpw = passwords.toUpperCase();
+        var welcomeSentence = document.getElementById("welcome");
+        welcomeSentence.innerHTML = "Welcome Back, " + capperpw
+
+        var hours = 0.08; // Reset when storage is more than 0.08hours
+        var now = new Date().getTime();
+        var setupTime = sessionStorage.getItem('setupTime');
+        if (setupTime == null) { sessionStorage.setItem('setupTime', now)
+        } else { 
+        if(now-setupTime > hours*60*60*1000) { 
+        sessionStorage.clear()
+        sessionStorage.setItem('setupTime', now); 
+}
+}
+    }
+    else if (passwords == "corinna"){
+        blocker.style.display = "none";
+        var capperpw = passwords.toUpperCase();
+        var welcomeSentence = document.getElementById("welcome");
+        welcomeSentence.innerHTML = "Welcome Back, " + capperpw
+
+        var hours = 0.08; // Reset when storage is more than 0.08hours
+        var now = new Date().getTime();
+        var setupTime = sessionStorage.getItem('setupTime');
+        if (setupTime == null) { sessionStorage.setItem('setupTime', now)
+        } else { 
+        if(now-setupTime > hours*60*60*1000) { 
+        sessionStorage.clear() 
+        sessionStorage.setItem('setupTime', now); 
+}
+}
+    }
+    else if (passwords == "craftguy"){
+        blocker.style.display = "none";
+        var capperpw = passwords.toUpperCase();
+        var welcomeSentence = document.getElementById("welcome");
+        welcomeSentence.innerHTML = "Welcome Back, " + capperpw
+
+        var hours = 0.08; // Reset when storage is more than 0.08hours
+        var now = new Date().getTime();
+        var setupTime = sessionStorage.getItem('setupTime');
+        if (setupTime == null) { sessionStorage.setItem('setupTime', now)
+        } else { 
+        if(now-setupTime > hours*60*60*1000) { 
+        sessionStorage.clear() 
+        sessionStorage.setItem('setupTime', now); 
+}
+}
+    }
+    else{
+
     if (password == "charles"){
         blocker.style.display = "none";
         var capperpw = password.toUpperCase();
@@ -120,7 +176,7 @@
         blocker.style.display = "block";
         window.location="http://craftguy.my.to/"
     }
-    
+}
 </script>
 </body>
 </html>
