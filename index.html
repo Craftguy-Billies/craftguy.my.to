@@ -90,10 +90,10 @@ Press F5 or Refresh to Login.
     <button id="logout" class="logout" onclick="logout()">Logout</button>
 <script type="text/javascript" lang="javascript">
 
-window.localStorage.getItem('username');
-window.localStorage.getItem('password');
+let usernames = window.localStorage.getItem('username');
+let passwords = window.localStorage.getItem('password');
 
-if (password == 'craftguy'){
+if (passwords == 'craftguy'){
 alert('Welcome billiez!')
 blocker.style.display = "none";
 let capperpw = password.toUpperCase();
@@ -105,7 +105,7 @@ var logoutbtn = document.getElementById("logout");
 logoutbtn.style.display = "block";
 }
 
-else if (password == 'charles'){
+else if (passwords == 'charles'){
 alert('Welcome dad!')
 blocker.style.display = "none";
 welcome.innerHTML = "Hi " + username + "!"
@@ -115,7 +115,7 @@ var logoutbtn = document.getElementById("logout");
 logoutbtn.style.display = "block";
 }
 
-else if (password == 'corinna'){
+else if (passwords == 'corinna'){
 alert('Welcome mum!')
 blocker.style.display = "none";
 welcome.innerHTML = "Hi " + username + "!"
