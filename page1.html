@@ -77,9 +77,13 @@ body {
 	<script lang="javascript" type="text/javascript">
 			var pw = localStorage.getItem('password')
 			var inserting = document.getElementById("insert")
-			inserting.innerHTML = pw + " 你好."
+			
                         if (pw = undefined){
                              window.location="http://craftguy.my.to/"
+}else if (pw = null){
+	window.location="http://craftguy.my.to/"
+}else{
+	inserting.innerHTML = pw + " 你好."
 }
 	</script>
 <div>&nbsp;</div>
