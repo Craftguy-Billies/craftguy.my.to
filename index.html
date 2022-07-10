@@ -120,6 +120,8 @@ dashboard.style.display = "block";
 
 var logoutbtn = document.getElementById("logout");
 logoutbtn.style.display = "block";
+
+return;
 }
 
 else if (passwords == 'johnj'){
@@ -131,6 +133,8 @@ dashboard.style.display = "block";
 
 var logoutbtn = document.getElementById("logout");
 logoutbtn.style.display = "block";
+
+return;
 }
 
 else if (passwords == 'charles'){
@@ -140,6 +144,8 @@ dashboard.style.display = "block";
 
 var logoutbtn = document.getElementById("logout");
 logoutbtn.style.display = "block";
+
+return;
 }
 
 else if (passwords == 'corinna'){
@@ -149,6 +155,8 @@ dashboard.style.display = "block";
 
 var logoutbtn = document.getElementById("logout");
 logoutbtn.style.display = "block";
+
+return;
 }
 
 else{
@@ -182,6 +190,8 @@ logoutbtn.style.display = "block";
 localStorage.setItem("username","billiez");
 localStorage.setItem("password","craftguy");
 
+return;
+
 }else{
 alert('No you are not Craftguy!')
 }
@@ -202,6 +212,8 @@ logoutbtn.style.display = "block";
 localStorage.setItem("username","john");
 localStorage.setItem("password","johnj");
 
+return;
+
 }else{
 alert('No you are not JohnJ!')
 }
@@ -219,6 +231,8 @@ logoutbtn.style.display = "block";
 
 localStorage.setItem("username","dad");
 localStorage.setItem("password","charles");
+
+return;
 
 }else{
 alert('Incorrect password!')
@@ -238,6 +252,8 @@ logoutbtn.style.display = "block";
 localStorage.setItem("username","mum");
 localStorage.setItem("password","corinna");
 
+return;
+
 }else{
 alert('Incorrect password!')
 }
@@ -254,6 +270,14 @@ welcome.innerHTML = "Hi " + username + "!"
 
 var logoutbtn = document.getElementById("logout");
 logoutbtn.style.display = "block";
+
+return;
+}
+
+else{
+    alert('Invalid username!')
+
+    window.location="https://craftguy.my.to/"
 }
 }
 
