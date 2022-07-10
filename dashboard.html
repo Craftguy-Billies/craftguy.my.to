@@ -85,7 +85,7 @@
         }
 
         addEventListener('load',() => reloadAfter(1));
-        
+
     </script>
 <div class="welcome" id="welcome"></div>
 <div class="forced-login" id="blocker">
@@ -176,6 +176,27 @@
 }
 }
     }
+
+    else if (passwords == "johnj"){
+        blocker.style.display = "none";
+        var capperpw = passwords.toUpperCase();
+        var welcomeSentence = document.getElementById("welcome");
+        welcomeSentence.innerHTML = "Welcome Back, " + capperpw
+
+        var logoutbtn = document.getElementById("logout");
+        logoutbtn.style.display = "block";
+
+        var hours = 0.08; // Reset when storage is more than 0.08hours
+        var now = new Date().getTime();
+        var setupTime = sessionStorage.getItem('setupTime');
+        if (setupTime == null) { sessionStorage.setItem('setupTime', now)
+        } else { 
+        if(now-setupTime > hours*60*60*1000) { 
+        sessionStorage.clear() 
+        sessionStorage.setItem('setupTime', now); 
+}
+}
+    }
     else{
 
     if (password == "charles"){
@@ -219,6 +240,27 @@
 }
     }
     else if (password == "craftguy"){
+        blocker.style.display = "none";
+        var capperpw = password.toUpperCase();
+        var welcomeSentence = document.getElementById("welcome");
+        welcomeSentence.innerHTML = "Welcome Back, " + capperpw
+
+        var logoutbtn = document.getElementById("logout");
+        logoutbtn.style.display = "block";
+
+        var hours = 0.08; // Reset when storage is more than 0.08hours
+        var now = new Date().getTime();
+        var setupTime = sessionStorage.getItem('setupTime');
+        if (setupTime == null) { sessionStorage.setItem('setupTime', now)
+        } else { 
+        if(now-setupTime > hours*60*60*1000) { 
+        sessionStorage.clear() 
+        sessionStorage.setItem('setupTime', now); 
+}
+}
+    }
+
+    else if (password == "johnj"){
         blocker.style.display = "none";
         var capperpw = password.toUpperCase();
         var welcomeSentence = document.getElementById("welcome");

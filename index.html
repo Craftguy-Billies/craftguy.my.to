@@ -122,6 +122,17 @@ var logoutbtn = document.getElementById("logout");
 logoutbtn.style.display = "block";
 }
 
+else if (passwords == 'johnj'){
+blocker.style.display = "none";
+let capperpw = passwords.toUpperCase();
+
+welcome.innerHTML = "Hi " + capperpw + "!"
+dashboard.style.display = "block";
+
+var logoutbtn = document.getElementById("logout");
+logoutbtn.style.display = "block";
+}
+
 else if (passwords == 'charles'){
 blocker.style.display = "none";
 welcome.innerHTML = "Hi " + usernames + "!"
@@ -173,6 +184,26 @@ localStorage.setItem("password","craftguy");
 
 }else{
 alert('No you are not Craftguy!')
+}
+}
+
+if (username == 'john'){
+if (password == 'johnj'){
+alert('Welcome JohnJ!')
+blocker.style.display = "none";
+let capperpw = password.toUpperCase();
+
+welcome.innerHTML = "Hi " + capperpw + "!"
+dashboard.style.display = "block";
+
+var logoutbtn = document.getElementById("logout");
+logoutbtn.style.display = "block";
+
+localStorage.setItem("username","john");
+localStorage.setItem("password","johnj");
+
+}else{
+alert('No you are not JohnJ!')
 }
 }
 
