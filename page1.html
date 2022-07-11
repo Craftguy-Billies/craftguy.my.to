@@ -38,7 +38,6 @@
 }
 }
 </style>
-<link href="css/bootstrap-4.4.1.css" rel="stylesheet" type="text/css">
 <link href="button.css" rel="stylesheet" type="text/css">
 <style type="text/css">
 body {
@@ -58,8 +57,9 @@ body {
 	<img src="image/main.png" width="40" height="41" alt=""/></div>
 
 	<script lang="javascript" type="text/javascript">
-			var pw = sessionStorage.getItem("password")
-			var inserting = document.getElementById("insert")
+			var pw = JSON.parse(sessionStorage.getItem("password"));
+			var inserting = document.getElementById("insert");
+			console.log(pw)
 			
                         if (pw = undefined){
                              window.location="http://craftguy.my.to/"
